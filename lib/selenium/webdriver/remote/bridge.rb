@@ -41,6 +41,8 @@ module Selenium
         #
 
         def initialize(opts = {})
+          require 'pry'
+          binding.pry
           opts = opts.dup
 
           http_client          = opts.delete(:http_client) { Http::Default.new }
